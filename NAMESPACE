@@ -1,0 +1,24 @@
+useDynLib("RFunctions", .registration=TRUE)
+
+export("create_x_lagged")
+
+export("roll_reg_withNo_constant", "roll_reg_with_constant")
+export("roll_reg_with_constant_faster", "roll_reg_with_constant_faster_checkCollinear")
+
+export("roll_AR_with_constant_checkCollinear", "roll_AR_checkCollinear")
+
+export("winsorize", "winsorize_quantiles", "winsorize_one_sided", "winsorize_one_sided_quantile")
+
+export("winsorize_dt", "winsorize_dt_one_sided", "winsorize_dt_grp", "winsorize_dt_one_sided_grp")
+
+export("splitVector", "SortXY")
+
+export("BinnedAverageX", "BinnedAverage", "BinnedBootstrapX", "BinnedBootstrap")
+
+export("size_of_subfolders", "size_of_subfolders_with_largest_files")
+export("get_quantiles_var", "set_quantiles_var", "set_quantiles_varF", "set_quantiles_var_norm")
+export("format_to_dates1", "format_to_datesWRDS")
+
+importFrom("Rcpp", "evalCpp")
+import("data.table", "dplyr")
+
