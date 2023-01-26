@@ -65,6 +65,10 @@ roll_reg_with_constant_faster_checkCollinear <- function(y, x, window_size) {
     .Call(`_RFunctions_roll_reg_with_constant_faster_checkCollinear`, y, x, window_size)
 }
 
+rowMins_local <- function(x) {
+    .Call(`_RFunctions_rowMins_local`, x)
+}
+
 winsorize <- function(x, lower_cutoff, upper_cutoff) {
     .Call(`_RFunctions_winsorize`, x, lower_cutoff, upper_cutoff)
 }

@@ -218,6 +218,17 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
+// rowMins_local
+Eigen::VectorXi rowMins_local(Rcpp::NumericMatrix x);
+RcppExport SEXP _RFunctions_rowMins_local(SEXP xSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type x(xSEXP);
+    rcpp_result_gen = Rcpp::wrap(rowMins_local(x));
+    return rcpp_result_gen;
+END_RCPP
+}
 // winsorize
 Rcpp::NumericVector winsorize(Rcpp::NumericVector x, double lower_cutoff, double upper_cutoff);
 RcppExport SEXP _RFunctions_winsorize(SEXP xSEXP, SEXP lower_cutoffSEXP, SEXP upper_cutoffSEXP) {
@@ -291,6 +302,7 @@ static const R_CallMethodDef CallEntries[] = {
     {"_RFunctions_roll_reg_with_constant", (DL_FUNC) &_RFunctions_roll_reg_with_constant, 3},
     {"_RFunctions_roll_reg_with_constant_faster", (DL_FUNC) &_RFunctions_roll_reg_with_constant_faster, 3},
     {"_RFunctions_roll_reg_with_constant_faster_checkCollinear", (DL_FUNC) &_RFunctions_roll_reg_with_constant_faster_checkCollinear, 3},
+    {"_RFunctions_rowMins_local", (DL_FUNC) &_RFunctions_rowMins_local, 1},
     {"_RFunctions_winsorize", (DL_FUNC) &_RFunctions_winsorize, 3},
     {"_RFunctions_winsorize_quantiles", (DL_FUNC) &_RFunctions_winsorize_quantiles, 4},
     {"_RFunctions_winsorize_one_sided", (DL_FUNC) &_RFunctions_winsorize_one_sided, 4},
