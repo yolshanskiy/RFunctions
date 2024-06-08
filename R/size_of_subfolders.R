@@ -109,6 +109,7 @@ if(FALSE){
   size_of_subfolders(root_dir, max_depth  = 4)
   root_dir = "~/Downloads/"
 
+  root_dir <- "/pool001/ols/"
   with_largest = size_of_subfolders_with_largest_files(root_dir)
   with_largest[type == "file"]
 
